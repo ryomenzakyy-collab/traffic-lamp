@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formm</title>
+</head>
+<body>
+
+
+    <section>
+        
+    </section>
+
+
+    <form action="/">
+        <fieldset>
+           <label for="nama">Nama</label>
+           <input type="text" name="nama" id="nama" value="" />
+        </fieldset>
+       <fieldset>
+        <label for="pesan">Pesan</label>
+        <textarea type="text" name="pesan" id="pesan"></textarea>
+       </fieldset>
+
+       <fieldset>
+        <label for="kota">Kota</label>
+        <select name="kota" id="kota">
+           <option value="asgard">asgard</option>
+           <option value="midgard">midgard</option>
+           <option value="valhalla">valhalla</option>
+        </select>
+       </fieldset>
+    </form>
+
+    <div>
+      <h3>Hasil</h3>
+         <div>Nama : <span id="hasil-nama"></span></div>
+         <div>Kota : <span id="hasil-kota"></span></div>
+        <div>Pesan : <span id="hasil-pesan"></span></div>
+    </div>
+
+
+
+    <script src="./form.js"></script>
+</body>
+</html>

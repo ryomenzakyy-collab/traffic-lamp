@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .contoh{
+            color: red;
+            font-weight: bold;
+            font-size: 32px;
+        }
+
+        .contoh.kecil{
+            font-size: 20px;
+        }
+
+        .contoh.lebih-besar{
+            font-size: 64px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contoh">Isi dari contoh</div>
+    <button id="tombol-kecil">Jadi kecil</button>
+    <button id="tombol-besar">Jadi besar</button>
+    <button id="tombol-reset">Reset</button>
+    <button id="tombol-toggle">Toggle</button>
+
+
+    <script>
+
+      const tombolKecil = document.getElementById("tombol-kecil");
+      const tombolBesar = document.getElementById("tombol-besar");
+      const tombolReset = document.getElementById("tombol-reset");
+      const tombolToggle = document.getElementById("tombol-toggle");
+
+      let contoh = document.getElementsByClassName("contoh");
+
+      tombolKecil.addEventListener("click", function () {
+        contoh[0].classList.add("kecil");
+        contoh[0].classList.remove("lebih-besar");
+      });
+
+      tombolBesar.addEventListener("click", function () {
+        contoh[0].classList.add("lebih-besar");
+        contoh[0].classList.remove("kecil");
+      });
+
+      tombolReset.addEventListener("click", function () {
+        contoh[0].classList.remove("lebih-besar");
+        contoh[0].classList.remove("kecil");
+      });
+
+      tombolToggle.addEventListener("click", function () {
+        contoh[0].classList.toggle("lebih-besar");
+      });
+
+    </script>
+</body>
+</html>

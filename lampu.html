@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px 40px;
+            gap: 20px;
+        }
+        .lampu{
+            width: 200px;
+            height: 200px;
+            border: 2px solid;
+            background: red;
+        }
+
+        .lampu{
+            opacity: 0.1;
+        }
+
+        .lampu.menyala{
+            opacity: 1;
+        }
+
+        .lampu.shadow{
+            box-shadow: 5px 1px 10px yellow;
+        }
+
+        .lampu.besar{
+            transform: scale(1.5);
+        }
+
+        .lampu:hover{
+            transition: opacity 0.3s, box-shadow 0.3s ease, color 0.3s ease-in-out ;
+            animation: berkedip 0.5s ease-in-out infinite;
+            opacity: 0.6;
+            background-color: blue;
+            box-shadow: 5px 10px 5px black;
+        }
+
+        .animasi-kedip{
+            animation: berkedip 0.5s ease-in-out infinite;
+        }
+
+        @keyframes berkedip{
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lampu"></div>
+    <div class="lampu menyala animasi-kedip"></div>
+    <div class="lampu menyala shadow"></div>
+    <div class="lampu menyala shadow besar"></div>
+    
+</body>
+</html>
